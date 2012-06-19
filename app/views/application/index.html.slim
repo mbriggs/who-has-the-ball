@@ -5,4 +5,6 @@ html
   head
     title Where the *#$%& is packman???
 
-  body foo
+  body
+    ul
+    = render(@entries) || content_tag(:li, "There are currently no entries in the db", class: 'empty')

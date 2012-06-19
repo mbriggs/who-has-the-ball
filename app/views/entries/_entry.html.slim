@@ -1,0 +1,8 @@
+li
+  span.name= entry.computer_name
+  span.queued_at= entry.created_at
+
+  - if entry.testing?
+    span.has-the-ball PACKMAN
+  - else
+    span.no-ball NO PACKMAN

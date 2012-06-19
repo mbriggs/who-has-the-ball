@@ -2,5 +2,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   def index
+    @entries = Entry.all
   end
 end
