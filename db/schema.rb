@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(:version => 20120619213537) do
 
   create_table "entries", :force => true do |t|
     t.string   "computer_name"
-    t.boolean  "testing"
+    t.boolean  "testing",              :default => false
     t.datetime "last_had_the_ball_at"
     t.datetime "created_at"
     t.datetime "updated_at"
