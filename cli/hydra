@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+begin
+  require 'commander/import'
+rescue LoadError
+  puts 'This program requires the commander gem, please do a "gem install commander"'
+  exit
+end
+
+program :name, 'Hydra Queue Manager'
+program :version, '1.0.0'
+program :description, 'Manages who is allowed to use the distributed test grid in a large team setting'
+
+command :queue do |c|
+  c.syntax = 'queue'
+  c.description = 'Add yourself to the queue, and find out who is ahead of you'
+end
+
+command :done do |c|
+  c.syntax = 'done'
+  c.description = 'Let everyone else know you are done, and tells you who to give the ball to next'
+end
+
+command :position do |c|
+  c.syntax = 'position'
+  c.description = 'Find out where you are in the queue'
+end
+
+command :pass do |c|
+  c.syntax = 'pass'
+  c.description = 'Give up your place in line'
+end
