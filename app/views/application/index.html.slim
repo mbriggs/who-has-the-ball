@@ -4,9 +4,38 @@ html
 
   head
     title Where the *#$%& is packman???
+    link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'
+    = stylesheet_link_tag :application
 
   body
-    ul
-    = render(@entries) || content_tag(:li, "There are currently no entries in the db", class: 'empty')
 
-    = javascript_include_tag :application
+    header
+      h1 Where the *#!% is packman???
+
+    = image_tag 'chase.png', id: 'chase'
+
+    section#installation
+      h2 Install
+
+      p Install with the following command
+
+      code: pre
+        | curl <host>/install | sudo sh
+
+      p usage:
+
+      code: pre
+        |
+          hydra queue    # enqueue yourself
+          hydra done     # mark yourself as finished
+          hydra position # find out how many people are before you
+          hydra pass     # give up your position
+
+
+    section#queue
+      h2 The Queue
+
+      ul#entries
+        = render(@entries) || content_tag(:li, "There are currently no entries in the db", class: 'empty')
+
+        = javascript_include_tag :application

@@ -1,0 +1,62 @@
+$background: #22457a
+$header: #ceb54e
+$header-shadow: darken($header, 35)
+$section: lighten($background, 40)
+$section-shadow: darken($section, 30)
+$section-border: darken($background, 5)
+$code-bg: lighten($section, 10)
+$code-border: darken($code-bg, 20)
+
+body
+  background-color: $background
+  padding: 15px
+
+h1
+  font-family: "Oleo Script"
+  margin-top: 10px
+  font-size: 4.8em
+  color: $header
+  text-shadow: $header-shadow 1px 1px, $header-shadow 2px 2px
+
+h2
+  margin-top: 0px
+  font-family: "Oleo Script"
+  text-align: center
+  font-size: 1.8em
+
+section
+  background-color: $section
+  border: 4px solid $section-border
+  padding: 20px
+  box-shadow: inset 0 0 10px 1px $section-shadow
+
+code pre
+  font-size: 1.1em
+  padding: 5px
+  background-color: $code-bg
+  border-radius: 3px
+  border: 1px solid $code-border
+
+#installation
+  float: left
+  p
+    margin-bottom: -10px
+
+#queue
+  float: right
+
+#chase
+  position: fixed
+  left: 5px
+  bottom: 5px
+
+#entries
+  margin-left: -20px
+  margin-right: -20px
+  padding: 0
+
+  li
+    list-style: none
+    padding: 5px
+    padding-left: 10px
+    padding-right: 10px
